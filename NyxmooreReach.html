@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GhostlyDev - Cloudy Towers</title>
+    <title>GhostlyDev - NyxmooreReach</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/app.js"></script>
 </head>
 <body>
     <header>
-        <h1>GhostlyDev - Eliza Voets</h1>
-        <button class="MenuButton" onclick="Show()">Menu</button>
-        
+        <div class="header--left">
+            <a href="index.html"><h1>GhostlyDev - Eliza Voets</h1></a>
+        </div>
+        <div class="header--right">
+           <button class="MenuButton" onclick="Show()">Menu</button> 
+        </div>
     </header>
     <div class="menu">
         <div class="menu_Homepage">
@@ -21,29 +24,36 @@
         <div class="menu_Projects"><li><a href="Projects.html">Projects</a></li></div>
         <div class="menu_Contact"><li><a href="contact.html">Contact</a></li></div>
     </div>
-     <div class="ContentHolder">
-        <div class="GameBaseInfo">
-            <img src="images/Logos/CloudyTowers.png" alt="">
-            <h2>Title</h2>
-            <p>
-                (description Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae iusto aut, nesciunt nostrum voluptates tempore labore iure autem voluptate saepe deleniti nam aperiam, est optio, quas quisquam! Non, adipisci possimus.
-                Recusandae magnam alias vero autem quis harum, iste et, quidem ullam qui eius, molestias earum consectetur iure provident nihil tempore explicabo labore deleniti modi atque est perferendis. Ut, eligendi ea. )<br>
+     <div class="ContentHolder ContentHolder--NyxmooreReach">
+        <section class="ContentSection MainInfoSection">
+            <section class="MainInfoSection--Left">
+                <img class="MainInfoIcon--NyxmooreReach" src="images/Logos/WIP-logo.png" alt="">
+            </section>
+            <section class="MainInfoSection--Right">              
+                <h2>Nyxmoore Reach</h2>
+                <p>
+                    A game I am currently working on is called Nyxmoore Reach. It's going to be a sandbox farming game with a story line behind it. It is highly inspired
+                    by multiple games. One of those examples being Stardew Valley. This was also the first ever project where I made an engine script. The gist of the game will
+                    be that you, the player, moves to a new city that has long stopped believing in witchcraft. You will have to climb your way up and get a good
+                    reputation to attract more customers. Make sure to befriend the people in the city itsself.<br>
 
-                <br>
-                Languages: c# <br>
-                Time Spent:<br>
-                Programs:<br>
-                People: 2<br>
-                me (Game Designer)<br>
-                Femke Aten (artist)  <a class="FemkeLink" href="https://www.artstation.com/elizabethdoesart">[ArtStation]</a> 
-                <br>
-            </p>
-        </div>
+                    <br>
+                    Languages: c# <br>
+                    Time Spent:<br>
+                    Programs: Unity 6, Procreate, Aseprite<br>
+                    People: 2<br>
+                    me (Game Designer)<br>
+                    Femke Aten (artist)  <a class="FemkeLink" href="https://www.artstation.com/elizabethdoesart">[ArtStation]</a> 
+                    <br>
+                </p>
+            </section>
+        </section>
+
+
         <div class="seperator"></div>
-        <div class="GameDeepDive">
-            
-            <section class="GameSectionImage One">
-                <h3>Subtitle</h3>
+        <section class="ContentSection CodeSection">
+            <section class="GameSection">
+                <h3>Player Movement</h3>
                 <img src="images/PageContent/CloudyTowers/Videos/BuyTowerGif.gif" alt="">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel hic recusandae eius id ratione. Repellat labore quam modi, illum aperiam culpa doloribus minus nam ducimus officia incidunt totam unde veritatis!
@@ -60,16 +70,27 @@
                     Explicabo placeat quisquam adipisci ea atque deserunt, tempora voluptate quam ex ut molestiae modi autem illum inventore eum error commodi? Maiores maxime tenetur saepe sequi deleniti consequuntur ea minus neque.
                 </p>
             </section>
-            <section class="GameSection">
+        <div class="seperator"></div>
+            <section class="GameSection One">
+                <h3>Inventory Scriptable Object</h3>
+                <img src="images/PageContent/NyxmooreReach/ItemData.gif" alt="">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel hic recusandae eius id ratione. Repellat labore quam modi, illum aperiam culpa doloribus minus nam ducimus officia incidunt totam unde veritatis!
-                    Nisi dicta, iusto ut quaerat pariatur quod magni facere commodi. Cumque impedit consequatur animi, ab accusantium vero aliquid assumenda praesentium saepe? Harum error nam, molestias ullam non expedita dignissimos qui.
-                    Dignissimos soluta itaque at dolorem aperiam nesciunt dolorum quisquam neque pariatur cum unde, culpa, qui consequatur. Voluptatum natus placeat, fuga tempore voluptates omnis ducimus, explicabo velit ea accusamus, ipsa voluptate?
-                    Pariatur odio, unde sint culpa expedita ad accusamus inventore veniam dolore voluptates tempore voluptatum consequuntur illum? Ab, rerum nobis? Qui officiis consectetur enim eaque a esse neque totam odit eligendi?
-                    Explicabo placeat quisquam adipisci ea atque deserunt, tempora voluptate quam ex ut molestiae modi autem illum inventore eum error commodi? Maiores maxime tenetur saepe sequi deleniti consequuntur ea minus neque.
+                    My initial idea was to make multiple bases for the different types of items, but I realised: "Hey.. Wouldn't it be easier if I just
+                    created a dropdown menu with item type?" And so I started on that. I soon ran into the issue that certain items did not need a grow season.
+                    For example, furniture. Because yes, let me just grow a lamp tree. So that's where I created my first ever engine script.
                 </p>
             </section>
-        </div>
+            <section class="GameSection">
+                <p>
+                   There's four different item types: herbs, fruits, animal drops and furniture. I want all of these to have different abilities, so the different properties will
+                   come in extremely handy in the near future. To explain the engine script, the image will be listed below with some more context, we get the enum names, And
+                   set it as a variable with the type "SerializedProperty". We draw the properties, with that I mean that I load them in, EXCEPT the ones that have been saved
+                   in the variable. We go through a few if statements, and we check which properties we want to show with each type. (e.g. If the type is herb,
+                   show these properties, and that for every type.) 
+                </p>
+            </section>
+            
+        </div>   
      </div>
      <footer></footer>
 </body>

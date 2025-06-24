@@ -8,11 +8,18 @@
     <script defer src="js/app.js"></script>
     
 </head>
+
+<script type="text/javascript">
+</script>
+
 <body>
     <header>
-        <h1>GhostlyDev - Eliza Voets</h1>
-        <button class="MenuButton" onclick="Show()">Menu</button>
-        
+        <div class="header--left">
+            <a href="index.html"><h1>GhostlyDev - Eliza Voets</h1></a>
+        </div>
+        <div class="header--right">
+           <button class="MenuButton" onclick="Show()">Menu</button> 
+        </div>
     </header>
     <div class="menu">
         <div class="menu_Homepage">
@@ -22,123 +29,124 @@
         <div class="menu_Projects"><li><a href="Projects.html">Projects</a></li></div>
         <div class="menu_Contact"><li><a href="contact.html">Contact</a></li></div>
     </div>
-    <section class="Pillar">    
-        <div class="pillartop--left">
-            <img src="images/PillarTop.png" alt="">
-        </div>
-        <div class="pillarbody-left"></div>
-        <div class="pillarbottom--left"></div>
-    </section>
-
-    <div class="ContentHolder">
-
-        <section class="Introduction">
-
-            <section class="Introduction--ProfessionalProfile">
-                <h1 class="Introduction--Name">Eliza Voets</h1>
-                <div class="Introduction--Moon"></div>
-                <h1 class="Introduction--Title">Game Developer</h1>
-            </section>
-
-            <section class="AboutMe">
-                <p class="AboutMe--MainInformation">Hello there! <br>
+    <div class="IntroductionHolder">
+        <div class="StarryBackground">            
+            <section class="Introduction">
+                <section class="Introduction--ProfessionalProfile">
+                    <h1 class="Introduction--Name">Eliza Voets</h1>
+                    <div class="Introduction--Moon StarCandleStudios"></div>
+                    <h1 class="Introduction--Title">Game Developer</h1>
+                </section>
+                <section class="AboutMe">
+                <p class="AboutMe--MainInformation">
+                Hello there! <br>
                 Welcome to my portfolio! <br>
-            I am a 19 year old female game developer with a love for fantasy and myths.<br>
-            The type of games I put focus on are:<br>
-            ⛤ Open World <br>
-            ⛤ Sandbox<br>
-            ⛤ Story games<br>
-            ⛤ RPGs </p>
-            <button><a href="AboutMe.html">More about me!</a></button>
-            </section>
-            
+                
+                I am a 19 year old female game developer with a love for fantasy and myths.<br><br>
+                The type of games I put focus on are:<br>
+                ⛤ Open World <br>
+                ⛤ Sandbox<br>
+                ⛤ Story games<br>
+                ⛤ RPGs </p>
+                <a href="AboutMe.html"><button class="ToAboutMe">More about me!</button></a>
+                </section>      
+        </section>
+        </div>   
+    </div>
+    <div class="ContentHolder">
+        <section class="ContentSection WIP-warning">
+            <h1>WARNING</h1>
+            <p>This portfolio is in active development. Things may be incompleted or missing. <br>
+            Keep an eye out for updates</p>
         </section>
         <div class="seperator"></div>
-        <section class="Projects">
-            <section class="Projects--ProjectHolder">
-                <div class="Game">
-                    <img src="" class="image"></img>
+        <section class="ContentSection HighlightedProject">
+            <h2>Most recent project</h2>
+            <div class="HighlightedProjectHolder">
+                <div class="HighlightedProjectHolder--left">
+                    <img class="RecentProjectImage" src="images/Logos/NavSimLogo.jpg" alt="Foto of frisc boat">  
+                </div>
+                <div class="HighlightedProjectHolder--right">
+                    <h3>Nav Sim</h3>   
+                    <p>This is the project I've worked on for my first internship of the two I have to do. <br>
+                        In this project I've contributed to a fuel component, dialogue system with randomized outcomes, 
+                        a minigame that works together with the dialogue system, and a quest system.</p>
+                    <a href="NavSim.html"><button class="HighlightedProjectButton">To page</button></a>
+                </div>
+            </div>
+        </section>
+        <div class="seperator"></div> 
+        <section class="ContentSection ProjectSection">
+            <div class="game">
+                    <img src="images/Logos/CloudyTowers.png" class="image"></img>
                     <h2 class="title"> Cloudy Towers</h2>
                     <div class="info">
-                        How much time <br>
-                        How many people <br>
-                        Languages <br>
-                        Start date <br>
-                        Finish date <br>
+                        How much time: 3 months <br>
+                        How many people: solo<br>
+                        Languages: C#<br>
+                        Start date: 11 - 09 - 2023 <br>
+                        Finish date: 07 - 11 - 2023<br>
                     </div>
-                    <button class="ToGame"><a>Read more</a></button>
+                    <a href="CloudyTowers.html"><button class="ToGame">Read more</button></a>
                 </div>
-                <div class="Game">
-                    <img src="" class="image"></img>
+                <div class="game">
+                    <img src="images/Logos/NavSimLogo.jpg" class="image"></img>
+                    <h2 class="title"> Nav Sim</h2>
+                    <div class="info">
+                        How much time: 4 months<br>
+                        How many people: solo<br>
+                        Languages: UE Blueprints<br>
+                        Start date: 04 - 03 - 2025<br>
+                        Finish date: 04 - 06 - 2025<br>
+                    </div>
+                    <a href="NavSim.html"><button class="ToGame">Read more</button></a>
+                </div>
+                
+                <div class="game">
+                    <img src="images/Logos/RiftGuardianLogo.png" class="image"></img>
+                    <h2 class="title">Rift Guardian</h2>
+                    <div class="info">
+                        How much time: 4 - 6 months<br>
+                        How many people: 22 people <br>
+                        Languages: UE Blueprints <br>
+                        Start date: 10 - 03 - 2024<br>
+                        Finish date: 20 - 07 - 2024<br>
+                    </div>
+                    <a href="RiftGuardian.html"><button class="ToGame">Read more</button></a>
+                </div>
+                <div class="game">
+                    <img src="images/Logos/WIP-logo.png" class="image"></img>
                     <h2 class="title">Nyxmoore Reach</h2>
                     <div class="info">
-                        How much time <br>
+                        How much time: 2 months <br>
                         How many people: 2<br>
                         Languages: C# <br>
                         Start date: 01/05/2025<br>
                         Finish date: Ongoing <br>
                     </div>
-                    <button class="ToGame"><a>Read more</a></button>
+                    <a href="NyxmooreReach.html"><button class="ToGame">Read more</button></a>
                 </div>
-                <div class="Game">
-                    <img src="images/RiftGuardianLogo.png" class="image"></img>
-                    <h2 class="title">Rift Guardian</h2>
+            <!--    <div class="game">
+                    <img src="images/Logos/WIP-logo.png" class="image"></img>
+                    <h2 class="title"> Sandwich Rush</h2>
                     <div class="info">
                         How much time <br>
-                        How many people <br>
-                        Languages <br>
+                        How many people: solo <br>
+                        Languages: C# <br>
                         Start date <br>
                         Finish date <br>
                     </div>
-                    <button class="ToGame"><a>Read more</a></button>
-                </div>
-                <div class="Game">
-                    <img src="" class="image"></img>
-                    <h2 class="title"> Work in progress!</h2>
-                    <div class="info">
-                        How much time <br>
-                        How many people <br>
-                        Languages <br>
-                        Start date <br>
-                        Finish date <br>
-                    </div>
-                    <button class="ToGame"><a>Read more</a></button>
-                </div>
-                <div class="Game">
-                    <img src="" class="image"></img>
-                    <h2 class="title"> Work in progress!</h2>
-                    <div class="info">
-                        How much time <br>
-                        How many people <br>
-                        Languages <br>
-                        Start date <br>
-                        Finish date <br>
-                    </div>
-                    <button class="ToGame"><a>Read more</a></button>
-                </div>
-
-                <div class="Game">
-                    <img src="" class="image"></img>
-                    <h2 class="title"> Work in progress!</h2>
-                    <div class="info">
-                        How much time <br>
-                        How many people <br>
-                        Languages <br>
-                        Start date <br>
-                        Finish date <br>
-                    </div>
-                    <button class="ToGame"><a>Read more</a></button>
-                </div>
-            </section>
+                    <a href=""><button class="ToGame">W.I.P</button></a>
+                </div>-->
         </section>
         <div class="seperator"></div>
-        <section class="contact">
+        <section class="ContentSection ContactSection">
             <h2>Want to contact me and possibly work together?</h2>
             <h3>Press the button!</h3>
-            <button class="contactButton" href="contact.html">Contact</button>
+            <a href="contact.html"><button class="contactButton" >Contact</button></a>
+        </section>
         </section>
     </div>
-
     <footer></footer>
 </body>
 </html>

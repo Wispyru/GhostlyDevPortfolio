@@ -9,9 +9,12 @@
 </head>
 <body>
     <header>
-        <h1>GhostlyDev - Eliza Voets</h1>
-        <button class="MenuButton" onclick="Show()">Menu</button>
-        
+        <div class="header--left">
+            <a href="index.html"><h1>GhostlyDev - Eliza Voets</h1></a>
+        </div>
+        <div class="header--right">
+           <button class="MenuButton" onclick="Show()">Menu</button> 
+        </div>
     </header>
     <div class="menu">
         <div class="menu_Homepage">
@@ -21,29 +24,39 @@
         <div class="menu_Projects"><li><a href="Projects.html">Projects</a></li></div>
         <div class="menu_Contact"><li><a href="contact.html">Contact</a></li></div>
     </div>
-     <div class="ContentHolder">
-        <div class="GameBaseInfo">
-            <img src="images/Logos/CloudyTowers.png" alt="">
-            <h2>Cloudy Towers</h2>
-            <p>
-                This was my project for second year's tower defense assignment. All assets were made
-                by me. This projects was to start learning about principles such as D.R.Y.
-                (don't repeat yourself) and S.R.P. (Single Responsibility)<br>
+     <div class="ContentHolder ContentHolder--CloudyTowers">
+        <div class="ContentSection MainInfoSection">
+            <section class="MainInfoSection--Left">
+                <img src="images/Logos/CloudyTowers.png" alt="">
+            </section>
+            <section class="MainInfoSection--Right">
+                <h2>Cloudy Towers</h2>
+                <p>
+                    This was my project for second year's tower defense assignment. All assets were made
+                    by me. This projects was to start learning about principles such as D.R.Y.
+                    (don't repeat yourself) and S.R.P. (Single Responsibility)<br>
 
-                <br>
-                Languages: C#<br>
-                Time Spent: 10 weeks<br>
-                Programs: Unity, Firealpaca, Pixilart.com<br>
-                People: 1, me.<br>
-                <br>
-            </p>
+                    <br>
+                    Languages: C#<br>
+                    Time Spent: 10 weeks<br>
+                    Programs: Unity, Firealpaca, Pixilart.com<br>
+                    People: 1, me.<br>
+                    <br>
+                </p>
+
+            </section>
+            
+
         </div>
         <div class="seperator"></div>
         <div class="GameDeepDive">
             
-            <section class="GameSectionImage">
+            <section class="GameSection">
                 <h3>Enemy</h3>
-                <img src="images/PageContent/CloudyTowers/Videos/CloudMovement.gif" alt="">
+ 
+                    <img src="images/PageContent/CloudyTowers/Videos/CloudMovement.gif" alt="">
+              
+
                 <p>
                     For the enemies, I chose to make thunderclouds that will try to get rid of the sunny weather.
                     These enemies go to their new position using waypoints that have been stored in a list. The asset was made by me with pixilart.com 
@@ -51,9 +64,9 @@
                     cute, but is not cute at all in it's context. That plan didn't go through because I had less time than I had expected. compared to my skill 
                     level at the time.</p>
             </section>
-            <section class="GameSectionImage">
+            <section class="GameSection">
                 <img src="images/PageContent/CloudyTowers/EnemyScripts/EnemySpawning.png" alt="">
-                <p>
+                </div>                <p>
                     we want to spawn the enemy before we can make it move in the first
                     place. Since I wanted a delay between when an enemy is 
                     spawned after the other, I used an IEnumerator. 
@@ -63,7 +76,8 @@
                     from the 'timeBetweenDelay' variable I have declared in the class. This is 3 by standard. If the variable hits 0, 
                     it starts the Co-routine, and instantiates the enemy.
                     </p>
-            </section>
+                </section>
+
             <section class="GameSection">
                 <p>
                     then, I made a script called WaypointScript. This script uses an array that collects every waypoint that is a child of the waypoint holder,
@@ -73,10 +87,9 @@
                     This array will be used in another script, which is the cloud movement.
                 </p>
             </section>
-
-
-            <section class="GameSectionImage">
+            <section class="GameSection">
                 <img src="images/PageContent/CloudyTowers/EnemyScripts/EnemyMovement.png" alt="">
+                    <img src="images/PageContent/CloudyTowers/EnemyScripts/Scripts/MoveToWaypoint.png" alt="">
                 <p>
 
                 </p>
@@ -89,21 +102,14 @@
                     The WaypointVector is defined by finding the distance between the cloud and the waypoint. 
                     If it is close enough to the waypoint, the index gets increased in the if-statement.
                 
-                    <br><br>In the 'OnTriggerEnter2D' function, it checks if it collides with the last waypoint, and it destroys the object.
+                    <br><br>In the 'OnTriggerEnter2D' function, it checks if it collides with the last waypoint, 
+                    and it destroys the object.
                     </p>
             </section>
 
-            <section class="GameSection">
-                <p>
-                    then, I made a script called WaypointScript. This script uses an array that collects every waypoint that is a child of the waypoint holder,
-                    which is an empty game object in the level itsself.
-                    The reason behind this is so I didn't have to manually add every waypoint to the array. 
-                    Instead, I used a for loop which checks how many children there are in an array. This is for a DRY principle. (Don't Repeat Yourself).
-                    This array will be used in another script, which is the cloud movement.
-                </p>
-            </section>
 
-            <section class="GameSectionImage AtkSpire">
+
+            <section class="GameSection AtkSpire">
                 <img src="images/PageContent/CloudyTowers/EnemyScripts/EnemyAttacking.png" alt="">
                 <p>
                     To make the sunspire get damaged, they just have to pass the asset on the map.
@@ -116,9 +122,7 @@
                     it.
                 </p>
             </section>
-            <section class="GameSectionImage EnemyDeath">
-                <img src="images/PageContent/CloudyTowers/EnemyScripts/EnemyDeathVS.png" alt="">
-            </section>
+
             <section class="GameSection">
                 <p>
                     To be able to neutralize the clouds, and ensure the weather remains sunny,
@@ -130,10 +134,14 @@
                     one point, set the "HasDied" boolean (true or false) to true, and we change the sprite
                     to the neutralized cloud, also changing it's tag to "neutralized"
                 </p>
-                
             </section>
+            <section class="GameSection EnemyDeath">
+                <img src="images/PageContent/CloudyTowers/EnemyScripts/EnemyDeathVS.png" alt="">
+            </section>
+                
+
             <br>
-            <section class="GameSectionImage Tower">
+            <section class="GameSection Tower">
             <h3>The tower (player)</h3>
                 <img src="images/PageContent/CloudyTowers/Videos/BuyTowerGif.gif" alt="">
                 <p>
@@ -148,6 +156,38 @@
                     keep an eye out for that :D 
                 </p>
             </section>
+
+            <section class="GameSection BuyTower">
+                <img src="images/PageContent/CloudyTowers/TowerScripts/PlaceTower.png" alt="">
+            </section>
+
+            <section class="GameSection AtkSpire">
+                <img src="images/PageContent/CloudyTowers/TowerScripts/BulletShootingVS.png" alt="">
+                <p>
+
+                </p>
+            </section>
+
+            <div class="ImageSlider">
+                <div class="ImageHolder">
+                    <img src="images/PageContent/CloudyTowers/EnemyScripts/Scripts/AttackSpire.png" alt="">
+                </div>
+                <div class="ImageHolder">
+                    <img src="images/PageContent/CloudyTowers/EnemyScripts/Scripts/AttackSpire.png" alt="">
+                </div>
+                <div class="ImageHolder">
+                    <img src="images/PageContent/CloudyTowers/EnemyScripts/Scripts/AttackSpire.png" alt="">
+                </div>
+
+                <a class="next">&#10094;</a>
+                <a class="prev">&#10095;</a>
+            </div>
+            <br>
+            <div class="ImageDots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
             
            <!-- <section class="GameSection">
                 <p>

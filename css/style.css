@@ -1,90 +1,99 @@
-@font-face {
-	font-family: WitchPumpkin;
-	src: url(/Font/Witch\ Pumpkin.otf)
-}
 * {
 	padding: 0;
 	margin: 0;
 	text-decoration: none;
 	max-width: 100%;
-	font-family: WitchPumpkin;
 	overflow: visible;
 	list-style: none;
 	color: var(--Text-color);
 	letter-spacing: 1.5px;
 }
 :root {
-	--Primary-color: #B76E79;
-	--Text-color: #F2E1DA;
-	--Second-color: #c47d83d8;
-	--Third-color: #643A4C;
-	--Fourth-color: #f0c08631;
-	--Header-color: #8d4f5c;
+	--Primary-color: #383143;
+	--Text-color: #f3e6f8;
+	--Second-color: #2b2334;
+	--Third-color: #e37e56;
+	--Fourth-color: #f7bf8352;
+	--Header-color: #1b141f;
 }
 body {
+	display: flex;
 	height: 100%;
 	width: 100vw;
-	background: linear-gradient(to bottom,var(--Primary-color),var(--Third-color));
+	flex-direction: column;
+	flex-wrap: wrap;
+	background-color: var(--Primary-color);
 	background-repeat: no-repeat;
+	align-items: center;
 }
-.HeaderLine,header {
-	background-color: var(--Header-color);
-	display: flex
+p > a{
+	color: var(--Fourth-color);
 }
 header {
+	background-color: var(--Header-color);
+	display: flex;
+	flex-direction: row;
 	position: fixed;
-	height: 7.5vh;
+	height: 7vh;
 	width: 100vw;
 	align-items: center;
+	justify-content: center;
+	gap: 70rem;
 	padding: 1%;
 	z-index: 3
 }
-header>h1 {
-	color: var(--Text-color)
+
+.header--left{
+	width: 25vw;
 }
-.HeaderLine {
-	width: 90vw;
-	height: 2px;
-	align-self: center
+header >.header--left > a > h1 {
+	color: var(--Text-color);
+	transition: .5s;
+	margin: 5%;
+}
+header > .header--left > a > h1:hover{
+	cursor: pointer;
+	color: var(--Third-color);
+	text-shadow: var(--Fourth-color) 0px 0px 10px;
+	transition: .5s;
 }
 .MenuButton,.MenuButton:hover {
-	position: absolute;
+
 	transition: .5s
 }
 .MenuButton {
-	right: 50px;
 	width: 65px;
 	height: 65px;
-	font-size: 30px;
+	font-size: 1.25rem;
 	border-radius: 50%;
-	box-shadow: 0 0 5px 5px #643a4c;
+	box-shadow: 0 0 5px 5px #c2b3a1;
 	border: 0;
-	color: var(--Third-color)
+	color: var(--Header-color)
 }
 .MenuButton:hover {
 	right: 47.5px;
 	width: 70px;
 	height: 70px;
-	background-color: #643a4c;
+	background-color: var(--Header-color);
 	box-shadow: 0 0 5px 5px var(--Text-color);
 	color: var(--Text-color)
 }
 .menu {
-	z-index: 1;
+	z-index: 2;
 	position: fixed;
 	width: 350px;
 	height: 500px;
-	background-color: #fff;
+	background-color: #ffffff;
 	border-left: solid var(--Text-color);
 	border-bottom: solid var(--Text-color);
 	right: 0;
 	top: -75%;
-	transition: 1s
+	transition: 1s;
 }
 .menu.active {
-	top: 11.75vh;
-	transition: 1.25s;
-	background-color: #8d4f5c90
+	transition: 1.5s;
+	background-color: #6f617a90;
+	top: 10vh;
 }
 .menu>div {
 	margin: 25px
@@ -93,479 +102,464 @@ header>h1 {
 	display: flex;
 	justify-self: center;
 	text-align: center;
-	font-size: 50px;
+	font-size: 2.25rem;
 	transition: .5s
 }
 .menu>div>li>a:hover {
 	text-shadow: #ffd396 0 0 10px;
-	transition: .5s
+	transition: .5s;
+	font-size: 2.3rem;
 }
-.pillartop--left {
-	position: absolute;
-	height: 30%;
-	background-color: #fff;
-	width: 9.75%
-}
-.ContentHolder {
-	position: relative;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: center;
-	top: 11vh;
-	padding: 5px;
-	height: 95%;
-	width: 80%;
-	background-color: var(--Second-color);
-	z-index: 0
-}
-.AboutMe>button,.seperator {
-	border-color: var(--Text-color)
+button:hover{
+	cursor: pointer;
 }
 .seperator {
-	display: flex;
-	justify-self: center;
-	width: 1250px;
-	height: 10px;
-	border: 2.5px;
-	border-style: dotted;
-	margin-top: 2vh;
-	margin-bottom: 5vh
+	border-top: 0.5px white solid;
+	width: 80%;
+}
+.IntroductionHolder {
+	position: relative;
+	width: 100vw;
+	height: 80vh;
+	overflow: hidden;
 }
 .Introduction {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	padding: 1rem;
+}
+.StarryBackground{
 	position: relative;
 	display: flex;
-	height: 800px;
-	width: 100vw;
-	margin-top: 15vh;
-	flex-direction: column
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background: #222029 url(../images/stars.png) repeat;
+	z-index: 0;
+	animation:twinkle 150s linear infinite;
 }
 .Introduction--ProfessionalProfile {
-	position: absolute;
-	display: inline-flex;
-	width: 50%;
-	align-content: center
-}
-.Introduction--Moon {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	box-shadow: 15px 15px 0 0 var(--Text-color);
-	transition-duration: 1s
-}
-.Introduction>* {
-	height: 10%;
-	width: 100vw;
-	font-size: 300%;
-	color: var(--Text-color);
-	display: flex;
-	flex-flow: wrap;
-	justify-content: space-around
-}
-.Introduction>h1 {
-	margin-top: 12%
-}
-.Introduction--Moon:hover {
-	cursor: pointer;
-	box-shadow: 15px 10px 0 5px var(--Third-color);
-	transition: all;
-	transition-duration: 1s
-}
-.AboutMe {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-self: center;
-	align-items: center;
-	height: 70vh;
-	width: 75%;
-	gap: 5rem;
-	box-sizing: border-box;
-	margin: 12.5rem;
-	padding: 0 2.5%;
-	font-size: 240%;
-	text-align: center
-}
-.AboutMe>button {
-	background-color: var(--Fourth-color);
-	color: var(--Text-color);
-	border-style: solid;
-	border-radius: 15px;
-	cursor: pointer;
-	transition: all .3s ease;
-	width: 200px;
-	height: 50px;
-	font-size: 100%;
-	padding: .5rem 1rem
-}
-.AboutMe>button:hover {
-	background-color: #ffd5a252;
-	transition: all .5s ease;
-	height: 52.5px;
-	width: 202.5px;
-	font-size: 102.5%;
-	box-shadow: var(--Text-color) 0 0 20px 10px;
-}
-.Projects--ProjectHolder {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	align-items:center;
 	justify-content: center;
-	width: 80vw;
-	height: 10%
+	width: 100vw;
+	gap: 7.5%;
 }
-.Game,.Game>* {
-	display: flex;
-	border-color: var(--Text-color)
+.Introduction--ProfessionalProfile > h1{
+	font-size: 200%;
 }
-.Game {
-	border-style: double;
-	border-width: 5px;
-	margin: 25px;
-	width: 325px;
-	height: 550px;
-	justify-content: flex-start;
-	align-items: center;
-	flex-direction: column;
-	background-color: var(--Fourth-color)
+.Introduction--Moon {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	box-shadow: 15px 15px 0px 0px var(--Text-color);
+	transition: .5s
 }
-.Game>* {
-	gap: 1rem;
-	margin: 10px;
-	color: var(--Text-color)
-}
-.Game>.image {
-	width: 80%;
-	height: 250px;
-	border-style: dotted;
-	border-width: 2px
-}
-.Game>.title {
-	width: 85%;
-	height: 20px;
-	font-size: 275%
-}
-.Game>.info {
-	width: 85%;
-	height: 25%;
-	font-size: 175%
-}
-.Game>.ToGame {
-	justify-content: center;
-	align-content: center;
-	text-align: center;
-	width: 85%;
-	height: 10%;
-	background-color: #f2e1da54;
-	border-style: solid;
-	color: var(--Text-color);
-	transition: .5s;
-}
-.Game>.ToGame:hover{
-	background-color: #ffe3d673;
-	box-shadow: var(--Text-color) 0 0 20px 5px;
+.Introduction--Moon:hover {
+	box-shadow: 20px 10px 0px 0px var(--Third-color);
 	transition: .5s;
 	cursor: pointer;
 }
-.contact {
+.AboutMe {
+	margin: 5%;
+	height: 20vh;
+}
+.AboutMe--MainInformation{
+	font-size: 1.25rem;
+}
+.ToAboutMe{
+	width: 10vw;
+	height: 5vh;
+
+	margin-top: 5vh;
+
+	background: transparent;
+	border: var(--Text-color) solid 1px;
+	transition: .5s;
+}
+.ToAboutMe:hover{
+	box-shadow: var(--Fourth-color) 0px 0px 5px 5px;
+	transition: .5s;
+}
+.ContentHolder {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+	align-items: center;
+	padding: 5px;
+	background-color: var(--Second-color);
+	width: 80vw;
+	height: 355vh;
+	z-index: 1;
+}
+.ContentSection{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 5rem
+}
+.HighlightedProject > h2{
+	font-size: 2.5rem;
+	margin: 2rem;
+}
+.WIP-warning{
 	text-align: center;
-	justify-content: center
 }
-.contact>h2 {
-	font-size: 300%
+.HighlightedProjectHolder{
+	gap: 2%;
+	background-color: #4d4c5a;
+	width: 55.5vw;
+	height: 32.5vh;
+	padding: 2.5%;
+	display: flex;
+	overflow: hidden;
+	box-shadow: #ffffff29 1px 0px 35px 15px;
 }
-.Game>.ToGame,.contact>h3 {
-	font-size: 250%
+.HighlightedProjectHolder--left{
+	display: flex;
+	align-items: center;
+	width: 35%;
 }
-.contactButton {
-	display: flexbox;
-	align-self: center;
-	width: 225px;
-	height: 75px;
-	font-size: 50px;
-	background-color: var(--Fourth-color);
-	border: var(--Text-color) solid 1.5px;
-	border-radius: 2.5%;
-	margin: 50px;
-	transition: .5s
+.HighlightedProjectHolder--right{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 65%;
 }
-.contactButton:hover {
-	background-color: #f9d4a750;
-	transition: .5s;
-	cursor: pointer
+.HighlightedProjectHolder--right > a{
+	position: relative;
+	top: 5vh;
+	width: 20vw;
+	height: 7.5vh;
+}
+.HighlightedProjectHolder--right > h3{
+	font-size: 2rem;
+}
+.RecentProjectImage{
+	width: 15vw;
+	height: 30vh;
+	bottom: 1%;
+	border: solid var(--Text-color) 2px;
+	
+}
+.HighlightedProjectButton{
+	top: 5vh;
+	width: 20vw;
+	height: 7.5vh;
+	background-color: transparent;
+	border: var(--Text-color) solid 2px;
+	font-size: 1.5rem;
+}
+.HighlightedProjectButton:hover{
+	cursor: pointer;
+}
+.ProjectSection{
+	width: 85%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+.game{
+	width: 325px;
+	height: 425px;
+	margin: 2rem;
+	background: #6f617a90;
+	border: white solid 2px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.game > img{
+	width: 200px;
+	height: 200px;
+	margin: 5%;
+}
+.game > .info{
+	margin-bottom: 5%;
+	
+}
+.game > a > .ToGame{
+	width: 9vw;
+	height: 5vh;
+	background: transparent;
+	border: white 2px solid;
+}
+.ContactSection > a > button{
+	width: 10vw;
+	height: 5vh;
+	margin: 2rem;
+
+	background-color: transparent;
+	border: solid white 2px;
 }
 footer {
 	position: static;
 	height: 75px;
 	width: 100%;
+	bottom: 0;
 	background-color: var(--Header-color);
-	margin-top: 85px;
 	z-index: 1;
 }
-
-
-
-
-/* Projects */
-
-.ProjectPageContainer{
-	width: 100%;
-	height: 100%;
-	display: flex;
+/* ================================ About me ================================ */ 
+.IntroductionSection{
 	flex-direction: row;
-	flex-wrap: wrap;
-
+	gap: 5vw;
 }
-
-.gameholder{
-	height: 300px;
-	width: 612.5px;
-	position: relative;
-	display: flex;
-	justify-self: center;
-	margin: 25px;
-	border: var(--Text-color) 2.5px dashed;
-	text-align: left;
-	background-color: #8d4f5c90;
-}
-
-.GameHolderTop > img{
-	position: absolute;
-	width: 200px;
-	height: 200px;
-	background-color: green;
-	top: 12.5px;
-	left: 15px;
-}
-
-.GameHolderTop > h2{
-	font-size: 70px;
-	position: absolute;
-	right: 25px;
-	width: 350px;
+.IntroductionSection--Right > h2{
+	font-size: 2rem;
 	
 }
-.GameHolderDescription{
-	position: absolute;
-	display: flex;
-	right: 225px;
-	top: 25%;
-	font-size: 30px;
+.IntroductionSection--Right > p{
+	font-size: 1.5rem;
 }
-.ToPage{
-	position: absolute;
-	height: 50px;
-	width: 350px;
-	right: 25px;
-	bottom: 20px;
-
-	background: transparent;
-	color: var(--Text-color);
-	font-size: 35px;
-
-	border: solid var(--Text-color) 1.5px;
-	transition: .5s;
+.IntroductionSection--Left > img{
+	border: #f2e1da solid 7.5px;
+	border-radius: 15px;
+	width: 25vw;
+	margin: 5%;
+}
+.SkillSection{
+	text-align: center;
+}
+.SkillSection > *{
+	margin: 1%;
+}
+.SkillSection > h2{
+	font-size: 2rem;
+}
+.SkillSection > h3{
+	font-size: 1.75rem;
+}
+.SkillSection > p{
+	font-size: 1.5rem;
+}
+.HobbySection{
+	text-align: center;
+}
+.HobbySection > h3{
+	font-size: 1.75rem;
+}
+.Hobby{
+	margin: 2%;
+}
+.Hobby > h4{
+	font-size: 1.60rem;
+}
+.Hobby > p{
+	font-size: 1.5rem;
 }
 
-.ToPage:hover{
-	background-color: #ffffff42;
-	transition: .5s;
-	cursor: pointer;
-}
-
-
-
-/* ================================ About me ================================ */ 
-
-.AboutmePageHolder{
-	width: 100%;
-	height: 100%;
-	display: flex;
+/* Projects */
+.ProjectsSection{
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 }
-.AboutmePageHolder > *{
-	width: 80%;
-	font-weight: 550;
-}
+.gameholder{
+	height: 35vh;
+	width: 30vw;
 
-.AboutMeIntroduction{
-	position: relative;
-	width: 80%;
-	height: 500px;
 	display: flex;
-	justify-self: center;
+	gap: 5%;
+
+	margin: 25px;
+	border: var(--Text-color) 2px solid;
+	background-color: #6f617a90;
 }
-
-.AboutMeIntroduction > *, .mainInfo > *{
-	position: relative;
+.gameholder--left > img{
+	width: 12.5vw;
+	margin: 5%;
 }
-
-.AboutMeIntroduction > h2{
-	font-size: 65px;
-	left: 205px;
-	top: 15px;
+.gameholder--right > h2{
+	font-size: 2rem;
 }
+.gameholder--right > a > button{
+	width: 12.5vw;
+	height: 7vh;
 
-.AboutMeIntroduction > p{
-	font-size: 35px;
-	top: 75px;
+	background: transparent;
+	color: var(--Text-color);
+	font-size: 1.5rem;
+
+	border: solid var(--Text-color) 1.5px;
+	transition: .5s;
 }
-
-.AboutMeIntroduction > img{
-	background-color: rebeccapurple;
-	width: 350px;
-	height: 450px;
-	top: 25px;
+.gameholder--right > *{
+	margin-bottom: 10%;
 }
-
-.mainInfo{
-	position: relative;
-	width: 80%;
-	height: 1750px;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
+.gameholder--right > .ToPage:hover{
+	background-color: #ffffff42;
+	transition: .5s;
+	cursor: pointer;
 }
+/* ===== Game Pages ===== */
 
-.mainInfo > *{
-	margin-bottom: 5px;
-	width: 80%;
-	display: flex;
+.ContentHolder--NavSim{
+	height: 5000vh;
 }
-
-.mainInfo > h2{
-	font-size: 65px;
+.ContentHolder--CloudyTowers{
+	height: 5000vh;
 }
-
-.mainInfo > h3{
-	font-size: 50px;
+.ContentHolder--NyxmooreReach{
+	height: 5000vh;
 }
-
-.mainInfo > .MoreAboutMe{
-	height: 700px;
-
+.ContentHolder--RiftGuardian{
+	height: 1100vh;
 }
-
-.mainInfo > .HobbyContainer{
-	display: flex;
+.Trailer{
+	font-size: 75px;
+	height: 150px;
+}
+.MainInfoSection{
 	flex-direction: row;
+
+}
+.MainInfoSection > *{
+	margin: 3%;
+}
+.MainInfoSection--Left > img{
+	width: 75rem;
+}
+.MainInfoIcon--NyxmooreReach{
+	width: 100vw;
+}
+.MainInfoSection--Right > *{
+	margin-top: 3%;
+}
+.MainInfoSection--Right > h2{
+	font-size: 2rem;
+}
+.CodeSection{
+
+	flex-direction: column;
 	flex-wrap: wrap;
-	
+	align-items: center;
 }
-
-.MoreAboutMe > p{
-	font-size: 30px;
-}
-
-.HobbyContainer > .Hobby{
-	width: 100%;
-	height: 200px;
-}
-
-.Hobby > h4{
-	font-size: 40px;
-}
-
-.Hobby > p{
-	font-size: 30px;
-}
-
-
-/* Game Pages*/
-
-.GameBaseInfo, .GameDeepDive{
-	position: relative;
-	width: 90%;
-}
-
-.GameBaseInfo{
-	height: 550px;
-}
-
-.GameBaseInfo > img{
-	position: absolute;
-	width: 375px;
-	top: 65px;
-}
-
-.GameBaseInfo > h2{
-	position: absolute;
-	top: 35px;
-	left: 400px;
-	font-size: 65px;
-}
-
-.GameBaseInfo > p{
-	position: absolute;
-	font-size: 35px;
-	left: 400px;
-	top: 100px;
-}
-
-.GameDeepDive{
+.GameSection{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 5000px;
-
+	text-align: center;
+	margin-bottom: 5%;
+	margin-top: 2%;
+}
+video{
+	margin-bottom: 5%;
+}
+.GameSection > iframe{
+	width: 80vw;
+	height: 50vh;
+	border: none;
+	margin-top: 5%;
+	margin-bottom:2.5% ;
 }
 
-.GameSection{
-	height: 200px;
-}
-
-.GameSectionImage{
-	height: 450px;
-}
-
-.GameSectionImage, .GameSection {
-	position: relative;
-	width: 100%;
-	margin-bottom: 15px;
-}
-
-.GameSection > *{
-	position: absolute;
+.GameSection > img{
+	margin-top: 5%;
+	margin-bottom: 2.5%;
+	width: 50vw;
+	transition: 1s;
 	
 }
-
-.GameSection > h3, .GameSectionImage > h3{
-	position: relative;
-	font-size: 55px;
-	left: 0px;
-	top: -15px;
+.GameSection > img:hover{
+	box-shadow: var(--Fourth-color) 1px 0px 35px 15px;
+	width: 60vw;
+	transition: 1s;
 }
 
-.GameSectionImage > img{
-	height: 300px;
-	
-
+.GameSection > h3{
+	margin-top: 2%;
+	margin-bottom: 1%;
+	font-size: 2rem;
 }
 
-.GameSection > p, .GameSectionImage > p{
-	position: absolute;
-	font-size: 35px;
-	top: 0px;
-	right: 25px;
+.GameSection > p{
+	font-size: 1.25rem;
 }
 
-.GameSectionImage > p{
-	left: 600px;
+.FuelTankSection{
+	flex-direction: row;
+	align-items: center;
+	gap: 5%;
 }
 
-.FemkeLink{
-	color: #fecea4;
+.FuelTankSection--Left > img{
+	margin: 1rem;
+	width: 45vw;
+}
+.FuelTankSection--Right{
+	text-align: left;
+}
+.FuelTankSection--Right > h3{
+	font-size: 2rem;
+}
+.FuelTankSection--Right > p{
+	font-size: 1.5rem;
 }
 
-.Tower{
-	margin-top: 150px;
+.ImageSlider{
+	max-width: 50rem;
 }
+
+.ImageHolder{
+	display: none;
+}
+
+.prev, .next{
+	font-weight: bold;
+  	font-size: 2rem;
+	transition: .5s;
+}
+
+.prev:hover, .next:hover{
+	text-shadow: var(--Fourth-color) 0px 0px 10px;
+	transition: .5s;
+	cursor: pointer;
+}
+
+.ImageDots{
+	text-align: center; 
+}
+/* ===== contact ===== */
+
+.ContentHolder--Contact{
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	height: 150vh;
+	margin-top: 2.5%;
+	text-align: center;
+
+}
+.ContactInfoSection{
+	}
+
+.SocialMediaLogos > *{
+	margin: 1rem;
+}
+
+ .ContactInfoSection > li{
+	font-size: 1.5rem;
+ }
+.SocialMediaButton > img{
+	width: 3vw;
+}
+
+.CvSection > *{
+	margin-bottom: 1%;
+}
+
 
 @media (max-width: 2560px){
 	.menu.active{
@@ -574,16 +568,6 @@ footer {
 }
 
 @media (max-width: 1440px){
-	.GameBaseInfo{
-		height: 600px;
-	}
-
-	.GameSectionImage{
-		height: 550px;
-	}
-	.GameSection{
-		height: 450px;
-	}
 
 	.menu.active{
 		top: 10vh;
@@ -620,86 +604,12 @@ footer {
 		font-size: 100%;
 	}
 
-	.GameBaseInfo{
-		height: 400px;
-	}
-
-	.GameBaseInfo > p{
-		font-size: 20px;
-	}
-
-	.GameBaseInfo > img{
-		width: 300px;
-	}
-
-	.GameSectionImage{
-		height: 250px;
-	}
-
-	.GameSectionImage > p, .GameSection > p{
-		font-size: 20px;
-
-	}
-
-	.GameSectionImage > p{
-		width: 350px;
-		left: 400px;
-	}
-
-	.GameSectionImage > img{
-		width: 375px;
-		height: 200px;
-	}
-	.GameSection{
-		height: 250px;
-	}
 
 
 }
 
 @media (max-width: 768px){
-	.GameBaseInfo{
-		
-		height: 400px;
-	}
-
-	.GameBaseInfo > p{
-		font-size: 20px;
-		width: 300px;
-		left: 250px;
-	}
-
-	.GameBaseInfo > h2{
-		left: 250px;
-	}
-
-	.GameBaseInfo > img{
-		width: 200px;
-	}
-
-	.GameSectionImage{
-		height: 550px;
-	}
-
-	.GameSectionImage > p, .GameSection > p{
-		font-size: 20px;
-
-	}
-
-	.GameSectionImage > p{
-		position: relative;
-		width: 350px;
-		left: 0px;
-		
-	}
-
-	.GameSectionImage > img{
-		width: 450px;
-		height: 250px;
-	}
-	.GameSection{
-		height: 275px;
-	}
+	
 }
 @media (max-width: 426px){
 	body{
@@ -711,32 +621,7 @@ footer {
 		height: 45px;
 	}
 
-	.GameBaseInfo{
-		height: 800px;
-	}
-
-	.GameBaseInfo > p{
-		font-size: 26px;
-		width: 350px;
-		left: 0px;
-		top: 400px;
-	}
-
-	.GameBaseInfo > h2{
-		left: 0;
-		top: 275px
-	}
-
-	.GameSection{
-		height: 500px;
-	}
-
-	.GameSectionImage{
-		height: 525px;
-	}
-	.GameSectionImage > img{
-		height: 200px;
-	}
+	
 
 	.menu.active{
 		top: 8vh;
@@ -746,37 +631,20 @@ footer {
 }
 
 @media (max-width: 376px){
-	.GameSection{
-		height: 600px;
-	}
-	.GameSectionImage > img{
-		height: 150px;
-	}
+
 	.MenuButton{
 		width: 42.5px;
 		height: 42.5px;
 	}
-	
-	.Spawner1{
-		height: 570px;
-	}
-	.Spawner2{
-		height: 250px;
-	}
-
-	.MoveToWP{
-		height: 300px;
-	}
 }
 
 @media (max-width: 321px){
-	.GameBaseInfo{
-		height: 900px;
-	}
-	.GameSection{
-		height:750px;
-	}
-	.GameSectionImage > img{
-		height: 150px;
-	}
+
+}
+
+
+
+@keyframes twinkle{
+	from {background-position: 0 0; }
+	to {background-position: 0px 2500px;}
 }

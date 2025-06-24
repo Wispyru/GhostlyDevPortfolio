@@ -8,10 +8,13 @@
     <script defer src="js/app.js"></script>
 </head>
 <body>
-    <header>
-        <h1>GhostlyDev - About Me</h1>
-        <button class="MenuButton" onclick="Show()">Menu</button>
-        
+     <header>
+        <div class="header--left">
+            <a href="index.html"><h1>GhostlyDev - Eliza Voets</h1></a>
+        </div>
+        <div class="header--right">
+           <button class="MenuButton" onclick="Show()">Menu</button> 
+        </div>
     </header>
     <div class="menu">
         <div class="menu_Homepage">
@@ -22,82 +25,73 @@
         <div class="menu_Contact"><li><a href="contact.html">Contact</a></li></div>
     </div>
      <div class="ContentHolder">
-        <div class="AboutmePageHolder">
-            <section class="AboutMeIntroduction">
-                <img src="" alt="">
+        <section class="ContentSection IntroductionSection">
+            <div class="IntroductionSection--Left">
+                <img src="images/imageOfSelf.jpg" alt="">
+            </div>
+            <div class="IntroductionSection--Right">
                 <h2>Introduction</h2>
                 <p>
                     My name is Eliza, and I am a game developer with a passion for open-world exploration games. <br>
-                    Ever since I was a child, I've had a passion for creating games. <br>
+                    Ever since I was a child, I've had a passion for creating games. <br> <br>
                     I immediately started looking for a school, which led me to Mediacollege Amsterdam.<br> 
                     From the moment I joined this school, I became very eager to learn. always wanted to learn more. <br>
                     Recently, I have developed an interest in biology, along with the opportunities of combining the two. 
                     
                     <br><br>My learning journey is far from over to say the least.
                 </p>
-            </section>
+            </div>
+        </section>
 
-            <div class="seperator"></div>
+        <div class="seperator"></div>
 
-            <section class="mainInfo">
-                <h2>more about myself and hobbies</h2>
+        <section class="ContentSection SkillSection">
+                <h2>Me and my skills</h2>
                 <h3>Facts about me</h3>
-                <div class="MoreAboutMe">
-                    <p>
-                        I am a 19 year old female game-developer that also happens to enjoy games, greek mythology, musicals, music in general, good stories, 
-                        and spending time with my friends. 
-                        <br><br> 
-                        
-                        I am currently studying at Mediacollege Amsterdam, and looking for a second internship. I enjoy working together in teams when communication 
-                        is clear. I have ADHD, which means I really need to be aware of what is happening. I don't enjoy losing track of what my team members are doing. 
-                        <br><br>
-                        Skills I possess are:<br>
-                        ⛤ Unity (C#)<br>
-                        ⛤ Unreal Enging (Blueprints)<br>
-                        ⛤ HTML and css <br>
-                        ⛤ Scrum
-
-                        <br><br>
-
-                        Skills I would love to improve (and which i am currently working on): <br>
-                        ⛤ Communication (conveying my ideas and problems in a clear way)<br>
-                        ⛤ Emotional regulation <br>
-                        ⛤ Working under high pressure<br>
-
-                    </p>
-                </div>
-                <h3>Hobbies</h3>
-
-                <div class="HobbyContainer">
-                    <div class="Hobby">
-                        <h4>Gaming</h4>
-                        <p>One of my favorite pass times is gaming. I play multiple games, such as Minecraft, Phasmophobia, Genshin Impact, Stardew Valley, and many more.
-                            When playing games, I usually play with friends. It's probably when I am most social. 
-                        </p>
-                    </div>
-                    <div class="Hobby">
-                        <h4>Cosplaying</h4>
-                        <p>I have yet to cosplay, but I am currently working on my first ever costume. Cosplaying allows me to express my creativity through dressing up as
-                            fictional characters, and creating their outfits. Along with that, I enjoy meeting fellow cosplayers and seeing other cosplays. 
-                        </p>
-                    </div>
-                    <div class="Hobby">
-                        <h4>Making music and singing</h4>
-                        <p>There are multiple instruments that I play! The instruments I play are guitar, ukulele, and I have basic knowledge of piano chords. Along with that
-                            I enjoy singing. Specifically musical songs. 
-                    </p>
-                    </div>
-                    <div class="Hobby">
-                        <h4>Drawing</h4>
-                        <p>This is a hobby I don't do quite as often as I used to, but I do enjoy drawing and doodling silly things here and there. 
-                            Drawing is a way I like to express myself, and I like doing either traditional art, or pixel art. 
-                        </p>
-                    </div>
-                </div>
-
+                <p>
+                    I am a 19 year old female game-developer that also happens to enjoy games, greek mythology, musicals, music in general, good stories, 
+                    and spending time with my friends. 
+                    <br><br> 
+                    
+                    I am currently studying at Mediacollege Amsterdam, and looking for a second internship. I enjoy working together in teams when communication 
+                    is clear. I have ADHD, which means I really need to be aware of what is happening. I don't enjoy losing track of what my team members are doing. 
+                    <br><br>
+                    Skills I possess are:<br>
+                    ⛤ Unity (C#)<br>
+                    ⛤ Unreal Engine (Blueprints)<br>
+                    ⛤ HTML and css <br>
+                    ⛤ Scrum
+                </p>
             </section>
-        </div>
-     </div>
+                <div class="seperator"></div>
+            <section class="ContentSection HobbySection">
+                <h3>Hobbies</h3>
+                <div class="Hobby">
+                    <h4>Gaming</h4>
+                    <p>One of my favorite pass times is gaming. I play multiple games, such as Minecraft, Phasmophobia, Genshin Impact, Stardew Valley, and many more.
+                        When playing games, I usually play with friends. It's probably when I am most social. 
+                    </p>
+                </div>
+                <div class="Hobby">
+                    <h4>Cosplaying</h4>
+                    <p>I have yet to cosplay, but I am currently working on my first ever costume. Cosplaying allows me to express my creativity through dressing up as
+                        fictional characters, and creating their outfits. Along with that, I enjoy meeting fellow cosplayers and seeing other cosplays. 
+                    </p>
+                </div>
+                <div class="Hobby">
+                    <h4>Making music and singing</h4>
+                    <p>There are multiple instruments that I play! The instruments I play are guitar, ukulele, and I have basic knowledge of piano chords. Along with that
+                        I enjoy singing. Specifically musical songs. 
+                    </p>
+                </div>
+                <div class="Hobby">
+                    <h4>Drawing</h4>
+                    <p>This is a hobby I don't do quite as often as I used to, but I do enjoy drawing and doodling silly things here and there. 
+                        Drawing is a way I like to express myself, and I like doing either traditional art, or pixel art. 
+                    </p>
+                </div>
+            </section>
+    </div>
      <footer></footer>
 </body>
 </html>
